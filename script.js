@@ -31,8 +31,8 @@ $(document).ready(function() {
 
     setInterval(currentTime, 1000);
 
-    var myAudio = new Audio("audio/clock-ticking-2.mp3");
-    myAudio.addEventListener('canplaythrough', function() {
+    var myAudio = $('#myAudio');
+    myAudio.on('canplaythrough', function() {
         this.loop = true;
         this.play();
     });
