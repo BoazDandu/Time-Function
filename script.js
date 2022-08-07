@@ -10,11 +10,10 @@ $(document).ready(function() {
         hourHand = "",
         secondHand = ""
 
-        if(seconds < 10) seconds = "0" + seconds
-        if(minutes < 10) minutes =  "0" + minutes
-        if(hours < 10) hours = "0" + hours
+        if(seconds < 10) seconds = "0" + seconds;
+        if(minutes < 10) minutes =  "0" + minutes;
         hours = hours % 12 || 12;
-        hours < 10 ? suffix = "AM" : suffix = "PM";
+        if(hours < 10) hours = "0" + hours;
         hourHand = hours * 30 + minutes * (360/720);
         minuteHand = minutes * 6 + seconds * (360/3600);
         secondHand = seconds * 6;
